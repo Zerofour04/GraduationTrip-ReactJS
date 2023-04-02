@@ -3,6 +3,7 @@ import "./Article.css";
 import { Card, Button, Row, Col } from "react-bootstrap";
 import PostFooter from "../PostFooter/PostFooter";
 import PostDropDown from "../PostDropDown/PostDropDown";
+import ArticlePicture from './ssss.jpg'
 
 const Article = () => {
   return (
@@ -10,17 +11,17 @@ const Article = () => {
       <Card.Img
         className="img"
         variant="top"
-        src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?cs=srgb&dl=pexels-creative-vix-9754.jpg&fm=jpg"
+        src={ArticlePicture}
       />
       <Card.Body className="p-4">
-        <h5>Article</h5>
+        <h5>Abi-Reise</h5>
         <Row>
           <Col
             md={9}
             className="p-2 align-self-center d-flex align-items-start"
           >
             {" "}
-            <h4>What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+            <h4>Abi-Reise der Klasse FT12D</h4>
           </Col>
           <Col md={3} className="text-right">
             <PostDropDown />
@@ -28,8 +29,7 @@ const Article = () => {
         </Row>
         <Row>
           <p className="px-2">
-            I’ve worked in UX for the better part of a decade. From now on, I
-            plan to rei…
+            Hey, dies ist sind alle wichtigen Informationen für die Abi-Reise. 
           </p>
         </Row>
         <PostFooter />

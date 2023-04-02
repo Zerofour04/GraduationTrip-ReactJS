@@ -8,7 +8,7 @@ const Post = () => {
       <Card.Img
         className="img"
         variant="top"
-        src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?cs=srgb&dl=pexels-creative-vix-9754.jpg&fm=jpg"
+        src="https://media.vrbo.com/lodging/33000000/32480000/32477200/32477106/d667daf4.f10.jpg"
       />
       <Card.Body className="p-4">
         <h5>Article</h5>
@@ -18,7 +18,7 @@ const Post = () => {
             className="p-2 align-self-center d-flex align-items-start"
           >
             {" "}
-            <h4>What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+            <h4>What if s brands had regular fonts? Meet RegulaBrands!</h4>
           </Col>
           <Col md={3} className="text-right">
             {" "}

@@ -1,33 +1,33 @@
 import React from "react";
 import "./Header.css";
-import { Container, Navbar, Nav, Form, Row, Col } from "react-bootstrap";
+import { Container, Navbar, Nav, Form, Row, Col, NavbarBrand } from "react-bootstrap";
+import Avatar from '@mui/material/Avatar';
+import logo from './2022-4.png';
+import { FaGithub, FaDiscord } from 'react-icons/fa';
+
 
 const Header = () => {
   return (
     <header className="header py-2 d-sm-none d-md-block d-none">
-      <Navbar>
+      <Navbar bg="light" variant="light">
         <Container>
-          <Col>
-            <Row>
-              <Col md={4} className="logo bb">
-                <Navbar.Brand>Brand</Navbar.Brand>
-              </Col>
-              <Col md={8}>
-                <Nav>
-                  <Col>
-                    <Row>
-                      <Col md={10} className="create-account bb">
-                        <Nav.Link>
-                          Create account.{" "}
-                          <span className="blue_txt">It's free!</span>
-                        </Nav.Link>
-                      </Col>
-                    </Row>
-                  </Col>
-                </Nav>
-              </Col>
-            </Row>
-          </Col>
+          <Navbar.Brand href="#home">
+            <img
+              alt=""
+              src={logo}
+              width="35"
+              height="35"
+              className="d-inline-block align-top"
+            />{' '}
+            Feed von Zerofour04
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text>
+            <a href="#login"><FaGithub className="navBarIcons"/>Website</a>
+            
+          </Navbar.Text>
+        </Navbar.Collapse>
         </Container>
       </Navbar>
     </header>

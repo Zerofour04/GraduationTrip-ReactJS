@@ -2,6 +2,7 @@
 .logo{
     text-align: left;
 }
+
 .create-account{
     text-align:right;
     font-weight: 700;
@@ -23,11 +24,21 @@
     font-size: .8em;
 }
 .search-div{
-    background-color: #F1F3F5 !important;
+    background-color: #eeeeee !important;
     border-radius: 35px !important;
 }
 .search-icon{
     flex-grow: 0;
     color: #868E96;
 }
+
+.navBarIcons{
+    font-size: 30px;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .navBarIcons {
+      font-size: 20px;
+    }
+  }
 
