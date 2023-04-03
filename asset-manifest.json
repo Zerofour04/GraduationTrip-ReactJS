@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b592b00b.css",
-    "main.js": "/static/js/main.430c0b10.js",
+    "main.css": "/static/css/main.33dc509a.css",
+    "main.js": "/static/js/main.65060bcf.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/banner.jpg": "/static/media/banner.1071f817422e72f8ad67.jpg",
+    "static/media/AvatarBen.png": "/static/media/AvatarBen.70a9064595f13c95d85c.png",
+    "static/media/ssss.jpg": "/static/media/ssss.80bb843e07130318d00e.jpg",
     "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/2022-4.png": "/static/media/2022-4.da10e3a052e66dd61783.png",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/KostenAufDerRoute.png": "/static/media/KostenAufDerRoute.1a265f86b33358e2709d.png",
     "index.html": "/index.html",
-    "main.b592b00b.css.map": "/static/css/main.b592b00b.css.map",
-    "main.430c0b10.js.map": "/static/js/main.430c0b10.js.map"
+    "main.33dc509a.css.map": "/static/css/main.33dc509a.css.map",
+    "main.65060bcf.js.map": "/static/js/main.65060bcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.b592b00b.css",
-    "static/js/main.430c0b10.js"
+    "static/css/main.33dc509a.css",
+    "static/js/main.65060bcf.js"
   ]
 }
