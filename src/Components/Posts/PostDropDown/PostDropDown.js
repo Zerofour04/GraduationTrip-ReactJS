@@ -11,7 +11,7 @@ const PostDropDown = () => {
           setOpenList(!openList);
         }}
       >
-        <i className="fa fa-ellipsis-h"></i>
+        {/* <i className="fa fa-ellipsis-h"></i> */}
       </div>{" "}
       <div className={`dropdown  ${openList ? "" : "d-none"} `}>
         <ul>

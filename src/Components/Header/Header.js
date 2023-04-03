@@ -1,17 +1,18 @@
 import React from "react";
 import "./Header.css";
 import { Container, Navbar, Nav, Form, Row, Col, NavbarBrand } from "react-bootstrap";
-import Avatar from '@mui/material/Avatar';
 import logo from './2022-4.png';
-import { FaGithub, FaDiscord } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { TbWorldWww } from 'react-icons/tb';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 const Header = () => {
   return (
-    <header className="header py-2 d-sm-none d-md-block d-none">
-      <Navbar bg="light" variant="light">
+    <header>
+      <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img
               alt=""
               src={logo}
@@ -24,8 +25,10 @@ const Header = () => {
           <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <a href="#login"><FaGithub className="navBarIcons"/>Website</a>
-            
+            <a href="https://github.com/Zerofour04"><FaGithub className="navBarIcons"/>GitHub</a>
+          </Navbar.Text>
+          <Navbar.Text>
+            <a href="https://zerofour04.me"><TbWorldWww className="navBarIcons"/>Website</a>
           </Navbar.Text>
         </Navbar.Collapse>
         </Container>

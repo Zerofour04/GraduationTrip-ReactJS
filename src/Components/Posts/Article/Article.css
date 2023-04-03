@@ -1,0 +1,85 @@
+.img {
+    height: 250px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+h5 {
+    font-size: 1.1em !important;
+}
+
+h4 {
+    font-size: 1.2em !important;
+    font-weight: 700 !important;
+    line-height: 1.7rem !important;
+}
+
+p {
+    color: #868E96;
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.ml-3 {
+    margin-left: 2rem;
+}
+
+.ml-1 {
+    margin-left: 0.75rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.writer {
+    font-weight: 700;
+}
+
+.gray-txt {
+    color: #495057;
+    font-weight: 500;
+    font-size: 0.75em;
+}
+
+.txt-bold {
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.download-btn {
+    width: 100%;
+    border: #CED4DA solid 1px !important;
+    background-color: #495057 !important;
+    color: #e6b410 !important;
+    font-weight: 500 !important;
+    font-size: 0.85em !important;
+}
+
+.maps-btn {
+    width: 100%;
+    border: #CED4DA solid 1px !important;
+    background-color: #495057 !important;
+    color: #0cdbe2 !important;
+    font-weight: 500 !important;
+    font-size: 0.85em !important;
+}
+
+.house-btn {
+    width: 100%;
+    border: #CED4DA solid 1px !important;
+    background-color: #495057 !important;
+    color: #07c04e !important;
+    font-weight: 500 !important;
+    font-size: 0.85em !important;
+}
