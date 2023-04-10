@@ -1,8 +1,17 @@
 .banner {
-    background-image: url('https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     height: 35vh;
     position: relative;
   }
+  
+  #overlay img { display: none; }
+
+  #overlay.currently-loading img { 
+      display: block; 
+      width: 100%;
+      height: 100%;
+  }
+
   .title{
     position:absolute;
     bottom: 6rem;

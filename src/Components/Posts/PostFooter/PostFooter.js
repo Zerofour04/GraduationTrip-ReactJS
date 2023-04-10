@@ -6,7 +6,7 @@ import AvatarBen from './AvatarBen.png';
 const PostFooter = () => {
   return (
     <div>
-      <Row className="d-md-block d-lg-block d-xl-block d-none">
+      <Row className="">
         <Col className="d-flex mt-3">
           <div className="pr-2">
             {" "}

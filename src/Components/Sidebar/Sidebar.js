@@ -14,7 +14,7 @@ const Sidebar = () => {
           <Col className="d-flex">
             <div className="px-2">
               <i className="fa fa-map-marker"></i>
-              <span className="ml-1 txt-bold">Ahmedabad, India</span>
+              <span className="ml-1 txt-bold">Germany, München</span>
             </div>
             <div className="px-2 ml-auto">
               <i className="fa fa-pencil"></i>

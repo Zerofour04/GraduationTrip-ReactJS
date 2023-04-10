@@ -9,9 +9,7 @@ const Main = () => {
     <Container>
       <Menu />
       <Body />
-      <Button className="fix d-xs-block d-sm-block d-md-none">
-        <i className="fa fa-pencil pencil"></i>
-      </Button>
+
     </Container>
   );
 };

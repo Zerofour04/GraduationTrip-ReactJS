@@ -7,16 +7,17 @@ import Sidebar from "../Sidebar/Sidebar";
 import Article from "../Posts/Article/Article";
 
 const Body = () => {
+
   return (
     <Container>
       <Row>
         <Col md={8} className="bb">
           <Article />
-          <Meetup />
-          <Job />
+          {/* <Meetup />
+          <Job /> */}
         </Col>
         <Col md={4} className="dd">
-          <Sidebar />
+          {/* <Sidebar /> */}
         </Col>
       </Row>
     </Container>
