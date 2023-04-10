@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.33dc509a.css",
-    "main.js": "/static/js/main.65060bcf.js",
+    "main.css": "/static/css/main.b6ecaebb.css",
+    "main.js": "/static/js/main.3cc38c4a.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/AvatarBen.png": "/static/media/AvatarBen.70a9064595f13c95d85c.png",
     "static/media/ssss.jpg": "/static/media/ssss.80bb843e07130318d00e.jpg",
@@ -10,13 +10,12 @@
     "static/media/2022-4.png": "/static/media/2022-4.da10e3a052e66dd61783.png",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/KostenAufDerRoute.png": "/static/media/KostenAufDerRoute.1a265f86b33358e2709d.png",
     "index.html": "/index.html",
-    "main.33dc509a.css.map": "/static/css/main.33dc509a.css.map",
-    "main.65060bcf.js.map": "/static/js/main.65060bcf.js.map"
+    "main.b6ecaebb.css.map": "/static/css/main.b6ecaebb.css.map",
+    "main.3cc38c4a.js.map": "/static/js/main.3cc38c4a.js.map"
   },
   "entrypoints": [
-    "static/css/main.33dc509a.css",
-    "static/js/main.65060bcf.js"
+    "static/css/main.b6ecaebb.css",
+    "static/js/main.3cc38c4a.js"
   ]
 }
