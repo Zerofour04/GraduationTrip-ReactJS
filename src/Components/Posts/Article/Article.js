@@ -57,8 +57,6 @@ const Article = () => {
               <ListGroup.Item><BsFillFuelPumpFill />Verbrauchskosten: 100€</ListGroup.Item>
               <ListGroup.Item><BsCashStack />Mautkosten: 52,30€</ListGroup.Item>
               <ListGroup.Item>Kosten für 4 Leute je Auto : 38€</ListGroup.Item>
-              <botton variant="dark" target="_blank" rel="noopener" type="button" class="btn btn-outline-secondary btn-block maps-btn" href="https://www.google.de/maps/dir/Staatl.+Fachoberschule+u.+Berufsoberschule+Fürstenfeldbruck,+Münchner+Str.+67,+82256+Fürstenfeldbruck,+Deutschland/52100,+Banjole,+Kroatien"><SiGooglemaps />Route (Google Maps)</botton>
-
             </ListGroup>
           </Card>
 
@@ -77,11 +75,9 @@ const Article = () => {
             </Card.Body>
           </Card>
         </Row>
-        <br/>
+        <br />
         <Row>
-        <h2>Unterkunft</h2>
-        <botton variant="primary" target="_blank" rel="noopener" type="button" class="btn btn-outline-secondary btn-block house-btn" href="https://fewo-direkt.de/ferienwohnung-ferienhaus/p6879604"><FaHouseUser />Unterkunft</botton>
-
+          <h2>Unterkunft</h2>
           <Carousel>
             <Carousel.Item>
               <img
@@ -157,8 +153,19 @@ const Article = () => {
 
           <br></br>
           Wichtige Links:
+
           <p>
-            <botton target="_blank" rel="noopener" type="button" class="btn btn-outline-secondary btn-block download-btn" href="https://res.cloudinary.com/adacde/image/upload/v1571649306/ADAC-eV/KOR/Text/PDF/reisevollmacht-englisch_kutovt.pdf"><FaDownload />Vollmacht herunterladen</botton>{' '}
+          <a href="https://www.google.de/maps/dir/Staatl.+Fachoberschule+u.+Berufsoberschule+Fürstenfeldbruck,+Münchner+Str.+67,+82256+Fürstenfeldbruck,+Deutschland/52100,+Banjole,+Kroatien" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-outline-secondary btn-block maps-btn"><SiGooglemaps />Route (Google Maps)</button>
+            </a>
+
+          <a href="https://fewo-direkt.de/ferienwohnung-ferienhaus/p6879604" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-outline-secondary btn-block house-btn"><FaDownload /><FaHouseUser />Unterkunft</button>
+            </a>
+
+            <a href="https://res.cloudinary.com/adacde/image/upload/v1571649306/ADAC-eV/KOR/Text/PDF/reisevollmacht-englisch_kutovt.pdf" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-outline-secondary btn-block download-btn"><FaDownload />Vollmacht herunterladen</button>
+            </a>
           </p>
         </Row>
         <PostFooter />
