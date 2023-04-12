@@ -1,15 +1,17 @@
-.fix{
-    
+.fix {
+
     position: fixed !important;
-   bottom: 2rem !important;
-   right: 2rem !important;
-border-radius: 50% !important;
-width: 4rem;
-height: 4rem;
-color: #fff;
-background-image: linear-gradient(#FF6B6B, #F06594); 
-border: none !important;
-outline: none !important; 
+    bottom: 2rem !important;
+    right: 2rem !important;
+    border-radius: 50% !important;
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    background-image: linear-gradient(#FF6B6B, #F06594);
+    border: none !important;
+    outline: none !important;
 }
-.pencil{
-    font-size: 1.5em;}
+
+.icon {
+    font-size: 1.5em;
+}

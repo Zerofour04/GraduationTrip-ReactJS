@@ -17,7 +17,7 @@ const Body = () => {
           <Job /> */}
         </Col>
         <Col md={4} className="dd">
-          {/* <Sidebar /> */}
+          <Sidebar />
         </Col>
       </Row>
     </Container>
