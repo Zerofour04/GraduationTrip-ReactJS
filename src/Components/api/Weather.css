@@ -1,0 +1,60 @@
+.my-weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .my-weather-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .my-weather-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .my-weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .my-weather-date {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .my-weather-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .my-weather-description {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .my-weather-temp {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .my-weather-humidity {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  

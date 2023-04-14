@@ -14,6 +14,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Alert from 'react-bootstrap/Alert';
 import Table from 'react-bootstrap/Table';
 import Toast from 'react-bootstrap/Toast';
+import Weather from "../../api/Weather";
 
 
 const Article = () => {
@@ -62,8 +63,10 @@ const Article = () => {
           </Alert>
           <PostFooter />
           <p className="px-2">
-            Hey, willkommen auf dieser Website, beginnen wir mal Schritt für Schritt. Ich bin Ben und bin Organisator von dieser Klassenfahrt, fahren wir los:
+            Hey, willkommen auf dieser Website, ich bin Ben und bin Organisator von dieser Klassenfahrt, auf dieser Website stehen alle wichtigen Informationen und bevorstehende Kosten:
           </p>
+          <h2 className="text-center mb-5">Fahrt</h2>
+
           <Card style={{ width: '80rem' }}>
             <Card.Body>
               <Card.Title><FcAutomotive /><FcAdvance />Abfahrt:</Card.Title>
@@ -84,7 +87,7 @@ const Article = () => {
         <br></br>
         <Row>
           <CardGroup>
-            <Card style={{ width: '80rem' }}>
+            <Card >
               <Card.Header><h4>Kosten für die Hinfahrt</h4></Card.Header>
               <ListGroup variant="flush">
                 <ListGroup.Item><h6><BsFillFuelPumpFill />Verbrauchskosten: 100€</h6></ListGroup.Item>
@@ -118,7 +121,7 @@ const Article = () => {
         </Row>
         <br />
         <Row>
-          <h2>Unterkunft</h2>
+          <h2 className="text-center mb-5">Unterkunft</h2>
           <Card style={{ width: '80rem' }}>
             <Card.Body>
               <Card.Title><FcAdvance /><FcHome />Ankunft:</Card.Title>
@@ -182,7 +185,7 @@ const Article = () => {
           <Table striped >
             <thead>
               <tr>
-                <th colSpan={2}>Leben, kochen, wohnen</th>
+                <th colSpan={0}>Leben, kochen, wohnen</th>
               </tr>
             </thead>
             <tbody>
@@ -300,11 +303,7 @@ const Article = () => {
           </Carousel>
         </Row>
         <Row>
-
-
-          <br></br>
-          Wichtige Links:
-
+          <Weather/>
           <p>
 
 
