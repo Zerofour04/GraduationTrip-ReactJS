@@ -5,13 +5,17 @@ import Body from "../Body/Body";
 import Menu from "../Menu/Menu";
 import "./Main.css";
 
+function warnung() {
+  alert('Diese Kontaktmöglichkeit ist noch nicht verfügbar!');
+}
+
 const Main = () => {
   return (
     <Container>
       <Menu />
       <Body />
-      <Button className="fix d-xs-block d-sm-block d-md-none">
-        <i className="icon"><FcDocument/></i>
+      <Button className="fix">
+        <i className="icon" onClick={warnung}><FcDocument/></i>
       </Button>
     </Container>
   );

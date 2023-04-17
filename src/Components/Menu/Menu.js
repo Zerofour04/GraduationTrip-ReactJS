@@ -8,9 +8,11 @@ const Menu = () => {
       <Navbar expand="lg" variant="light" bg="light">
         <Container>
           <Navbar.Brand href="#abi-reise">Alle Beiträge:</Navbar.Brand>
+
         </Container>
       </Navbar>
     </Container>
+    
   );
 };
 

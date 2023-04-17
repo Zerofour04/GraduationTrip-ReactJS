@@ -13,9 +13,11 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Carousel from 'react-bootstrap/Carousel';
 import Alert from 'react-bootstrap/Alert';
 import Table from 'react-bootstrap/Table';
+import Badge from 'react-bootstrap/Badge';
 import Toast from 'react-bootstrap/Toast';
 import Weather from "../../api/Weather";
-
+import TravelAdvice from "./components/TravelAdvice";
+import AvatarBen from '../PostFooter/AvatarBen.png';
 
 const Article = () => {
   return (
@@ -25,7 +27,7 @@ const Article = () => {
         src={ArticlePicture}
       />
       <Card.Body className="p-4">
-        <h5>Abi-Reise</h5>
+        <h5 id="abi-reise">Abi-Reise</h5>
         <Row>
           <Col
             md={9}
@@ -63,7 +65,8 @@ const Article = () => {
           </Alert>
           <PostFooter />
           <p className="px-2">
-            Hey, willkommen auf dieser Website, ich bin Ben und bin Organisator von dieser Klassenfahrt, auf dieser Website stehen alle wichtigen Informationen und bevorstehende Kosten:
+            Hey, willkommen auf dieser Website, ich bin Ben und bin Organisator von dieser Klassenfahrt, auf dieser Website stehen alle wichtigen Informationen und bevorstehende Kosten.
+            Sollte es fragen geben, stehe ich gerne offen, diese zu beantworten.
           </p>
           <h2 className="text-center mb-5">Fahrt</h2>
 
@@ -132,7 +135,7 @@ const Article = () => {
                 <Card.Link href="https://www.paypal.com/pools/c/8RCHTCf7UR" target="_blank" rel="noopener noreferrer"><BsPaypal />PayPal.</Card.Link>
               </Card.Text>
               <a href="https://fewo-direkt.de/ferienwohnung-ferienhaus/p6879604" target="_blank" rel="noopener noreferrer">
-                <button class="btn btn-outline-secondary btn-block house-btn"><FaHouseUser />Unterkunft</button>
+                <button class="btn btn-outline-secondary btn-block house-btn"><FaHouseUser />Link: Unterkunft</button>
               </a>
               <Table striped >
                 <thead>
@@ -157,7 +160,8 @@ const Article = () => {
 
               </Table>
               <Alert key='danger' variant='danger'>
-                Da wir die Anzahlung über PayPal getätigt habe, wäre es ganz gut, wenn jeder noch 10€ mitnehmen würden für die Bearbeitungsgebühren und Trinkgeld.
+                Da wir die Anzahlung über PayPal getätigt habe, ging leider ein Bruchteil an Geld verloren, da der Vermietet auch dieses Geld natürlich Bar abheben musste.
+                Deswegen wäre es dringend, dass jeder noch 10€ mitnehmen würde um diese Kosten zu begleichen.
               </Alert>
               <Card.Text>
                 Sonst verfügt die Villa über 500m² Platz
@@ -302,20 +306,85 @@ const Article = () => {
             </Carousel.Item>
           </Carousel>
         </Row>
+        <br />
         <Row>
-          <Weather/>
+          <h2 className="text-center mb-5">Wetter</h2>
+          <Card>
+            <Card.Body>
+              <Card.Title>Wetter in Banjole</Card.Title>
+              <Card.Subtitle className="mb-2 text-muted">Wettervorhersage für die nächsten Tage</Card.Subtitle>
+              <Weather />
+
+            </Card.Body>
+          </Card>
+        </Row>
+        <br />
+        <Row>
+          <h2 className="text-center mb-5">Reisehinweise</h2>
+
+
+          <TravelAdvice />
+        </Row>
+        <Row>
+          <Alert variant="danger">
+            <Alert.Heading>Wichtig für Minderjährige</Alert.Heading>
+            <p>
+              Es ist ganz wichtig, dass Minderjährige eine Vollmacht mitführen, schließlich sind sie noch nicht volljährig.
+            </p>
+            <hr />
+            <p className="mb-0">
+              Ohne eine solche Einverständniserklärung kann es in manchen Ländern an der Grenze zu Problemen bei der Einreise kommen, wenn ein Kind ohne oder mit nur einer personensorgeberechtigten Person unterwegs ist. In Europa betrifft dies insbesondere Bosnien und Herzegowina, Griechenland, Großbritannien, Kroatien, Nordmazedonien, Slowenien und Serbien.
+            </p>
+            <hr />
+            <p className="mb-0">
+              Unten finden Sie eine Reisevollmacht von ADAC, die bereits übersetzt wurde auf kroatisch.
+            </p>
+          </Alert>
           <p>
-
-
-
-
-            <a href="https://res.cloudinary.com/adacde/image/upload/v1571649306/ADAC-eV/KOR/Text/PDF/reisevollmacht-englisch_kutovt.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="https://res.cloudinary.com/adacde/image/upload/v1571649899/ADAC-eV/KOR/Text/PDF/reisevollmacht-kroatien_sdd9jk.pdf" target="_blank" rel="noopener noreferrer">
               <button class="btn btn-outline-secondary btn-block download-btn"><FaDownload />Vollmacht herunterladen</button>
             </a>
           </p>
         </Row>
+        <br />
+        <Row>
+          <h2 className="text-center mb-5">Aktueller Feed</h2>
+          <PostFooter />
+
+          <Toast>
+            <Toast.Header closeButton={false}>
+              <img className="rounded me-2" alt="" />
+              <strong className="me-auto">
+                <Badge bg="warning" text="dark">
+                  Hinweis
+                </Badge>{' '}
+                Ben
+              </strong>
+              <small>17.04.2023</small>
+            </Toast.Header>
+            <Toast.Body>
+              Da wir noch nicht darüber gesprochen haben, wie wir unseren Urlaub gestalten möchten, kann ich nur eine grobe Schätzung abgeben. Es ist anzunehmen, dass jeder von uns etwa 200-300€ für die Essensverpflegung benötigen wird. Sobald wir Einzelheiten besprochen haben, können wir eine genauere Kostenschätzung machen.
+
+              Ich hoffe, das hilft Ihnen weiter.            </Toast.Body>
+          </Toast>
+
+          <Toast>
+            <Toast.Header closeButton={false}>
+              <img className="rounded me-2" alt="" />
+              <strong className="me-auto">
+                <Badge bg="info" text="dark">
+                  Info
+                </Badge>{' '}
+                Ben
+              </strong>
+              <small>17.04.2023</small>
+            </Toast.Header>
+            <Toast.Body>Die Reisehinweise sind selbstverständlich wichtige Vorsichtsmaßnahmen und können auf den ersten Blick überwältigend wirken. Meiner Meinung nach kann es jedoch ausreichen, eine Checkliste aus dem Internet herunterzuladen und diese zu beachten. Es ist jedoch empfehlenswert, dass Eltern sich zumindest einmal einen Überblick über die Hinweise verschaffen, um mögliche Risiken zu minimieren. Besonders bei Reisen mit Minderjährigen ist es unbedingt erforderlich, eine Vollmacht herunterzuladen, um eventuelle Schwierigkeiten bei der Einreise zu vermeiden.
+            </Toast.Body>
+          </Toast>
+        </Row>
       </Card.Body>
-    </Card>
+    </Card >
   )
 };
 
