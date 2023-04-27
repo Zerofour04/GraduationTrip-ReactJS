@@ -68,6 +68,44 @@ const Article = () => {
             Hey, willkommen auf dieser Website, ich bin Ben und bin Organisator von dieser Klassenfahrt, auf dieser Website stehen alle wichtigen Informationen und bevorstehende Kosten.
             Sollte es fragen geben, stehe ich gerne offen, diese zu beantworten.
           </p>
+          </Row>
+          <Row>
+          <h2 className="text-center mb-5">Aktueller Feed</h2>
+          <PostFooter />
+
+          <Toast>
+            <Toast.Header closeButton={false}>
+              <img className="rounded me-2" alt="" />
+              <strong className="me-auto">
+                <Badge bg="warning" text="dark">
+                  Hinweis
+                </Badge>{' '}
+                Ben
+              </strong>
+              <small>17.04.2023</small>
+            </Toast.Header>
+            <Toast.Body>
+              Da wir noch nicht darüber gesprochen haben, wie wir unseren Urlaub gestalten möchten, kann ich nur eine grobe Schätzung abgeben. Es ist anzunehmen, dass jeder von uns etwa 200-300€ für die Essensverpflegung benötigen wird. Sobald wir Einzelheiten besprochen haben, können wir eine genauere Kostenschätzung machen.
+
+              Ich hoffe, das hilft Ihnen weiter.            </Toast.Body>
+          </Toast>
+
+          <Toast>
+            <Toast.Header closeButton={false}>
+              <img className="rounded me-2" alt="" />
+              <strong className="me-auto">
+                <Badge bg="info" text="dark">
+                  Info
+                </Badge>{' '}
+                Ben
+              </strong>
+              <small>17.04.2023</small>
+            </Toast.Header>
+            <Toast.Body>Die Reisehinweise sind selbstverständlich wichtige Vorsichtsmaßnahmen und können auf den ersten Blick überwältigend wirken. Meiner Meinung nach kann es jedoch ausreichen, eine Checkliste aus dem Internet herunterzuladen und diese zu beachten. Es ist jedoch empfehlenswert, dass Eltern sich zumindest einmal einen Überblick über die Hinweise verschaffen, um mögliche Risiken zu minimieren. Besonders bei Reisen mit Minderjährigen ist es unbedingt erforderlich, eine Vollmacht herunterzuladen, um eventuelle Schwierigkeiten bei der Einreise zu vermeiden.
+            </Toast.Body>
+          </Toast>
+        </Row>
+          <Row>
           <h2 className="text-center mb-5">Fahrt</h2>
 
           <Card style={{ width: '80rem' }}>
@@ -347,42 +385,7 @@ const Article = () => {
           </p>
         </Row>
         <br />
-        <Row>
-          <h2 className="text-center mb-5">Aktueller Feed</h2>
-          <PostFooter />
 
-          <Toast>
-            <Toast.Header closeButton={false}>
-              <img className="rounded me-2" alt="" />
-              <strong className="me-auto">
-                <Badge bg="warning" text="dark">
-                  Hinweis
-                </Badge>{' '}
-                Ben
-              </strong>
-              <small>17.04.2023</small>
-            </Toast.Header>
-            <Toast.Body>
-              Da wir noch nicht darüber gesprochen haben, wie wir unseren Urlaub gestalten möchten, kann ich nur eine grobe Schätzung abgeben. Es ist anzunehmen, dass jeder von uns etwa 200-300€ für die Essensverpflegung benötigen wird. Sobald wir Einzelheiten besprochen haben, können wir eine genauere Kostenschätzung machen.
-
-              Ich hoffe, das hilft Ihnen weiter.            </Toast.Body>
-          </Toast>
-
-          <Toast>
-            <Toast.Header closeButton={false}>
-              <img className="rounded me-2" alt="" />
-              <strong className="me-auto">
-                <Badge bg="info" text="dark">
-                  Info
-                </Badge>{' '}
-                Ben
-              </strong>
-              <small>17.04.2023</small>
-            </Toast.Header>
-            <Toast.Body>Die Reisehinweise sind selbstverständlich wichtige Vorsichtsmaßnahmen und können auf den ersten Blick überwältigend wirken. Meiner Meinung nach kann es jedoch ausreichen, eine Checkliste aus dem Internet herunterzuladen und diese zu beachten. Es ist jedoch empfehlenswert, dass Eltern sich zumindest einmal einen Überblick über die Hinweise verschaffen, um mögliche Risiken zu minimieren. Besonders bei Reisen mit Minderjährigen ist es unbedingt erforderlich, eine Vollmacht herunterzuladen, um eventuelle Schwierigkeiten bei der Einreise zu vermeiden.
-            </Toast.Body>
-          </Toast>
-        </Row>
       </Card.Body>
     </Card >
   )
