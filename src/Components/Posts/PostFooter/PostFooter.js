@@ -17,7 +17,7 @@ const PostFooter = () => {
           </div>
           <div className="px-2 writer">Ben Ho</div>
           <div className="ml-auto d-flex align-items-center">
-            Zuletzt aktualisiert: 17.04.2023
+            Zuletzt aktualisiert: 11. Mai 2023
           </div>
         </Col>
       </Row>

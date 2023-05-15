@@ -20,15 +20,15 @@ const Header = () => {
               height="35"
               className="d-inline-block align-top"
             />{' '}
-            Feed von Zerofour04
+            Feed von Ben // Zerofour04
           </Navbar.Brand>
           <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <a href="https://github.com/Zerofour04"><FaGithub className="navBarIcons"/>GitHub</a>
+            <a href="https://zerofour04.me"><TbWorldWww className="navBarIcons"/>Website</a>
           </Navbar.Text>
           <Navbar.Text>
-            <a href="https://zerofour04.me"><TbWorldWww className="navBarIcons"/>Website</a>
+            <a href="https://github.com/Zerofour04"><FaGithub className="navBarIcons"/>GitHub</a>
           </Navbar.Text>
         </Navbar.Collapse>
         </Container>

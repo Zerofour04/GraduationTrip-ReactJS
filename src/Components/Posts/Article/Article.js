@@ -18,6 +18,7 @@ import Toast from 'react-bootstrap/Toast';
 import Weather from "../../api/Weather";
 import TravelAdvice from "./components/TravelAdvice";
 import AvatarBen from '../PostFooter/AvatarBen.png';
+import PackageList from "./components/PackageList";
 
 const Article = () => {
   return (
@@ -27,7 +28,7 @@ const Article = () => {
         src={ArticlePicture}
       />
       <Card.Body className="p-4">
-        <h5 id="abi-reise">Abi-Reise</h5>
+        <h5 id="abi-reise">Reiseplaner / Reiseinformationen</h5>
         <Row>
           <Col
             md={9}
@@ -68,10 +69,26 @@ const Article = () => {
             Hey, willkommen auf dieser Website, ich bin Ben und bin Organisator von dieser Klassenfahrt, auf dieser Website stehen alle wichtigen Informationen und bevorstehende Kosten.
             Sollte es fragen geben, stehe ich gerne offen, diese zu beantworten.
           </p>
-          </Row>
-          <Row>
+        </Row>
+        <Row>
           <h2 className="text-center mb-5">Aktueller Feed</h2>
           <PostFooter />
+
+          <Toast>
+            <Toast.Header closeButton={false}>
+              <img className="rounded me-2" alt="" />
+              <strong className="me-auto">
+                <Badge bg="danger" text="dark">
+                  Dringender Hinweis
+                </Badge>{' '}
+                Ben
+              </strong>
+              <small>11. Mai 2023</small>
+            </Toast.Header>
+            <Toast.Body>
+              Vor 2 Wochen hat sich ein Schüler, der Teil unserer Gruppe ist und als Fahrer vorgesehen war, den Zeh gebrochen. Dies könnte zukünftig zu Problemen bei der Anreise führen. Glücklicherweise haben wir bereits alternative Lösungen besprochen. Eine Möglichkeit wäre, dass ein Schüler einen Tag später mit einem anderen Schüler mitfährt, um die ursprüngliche Anzahl von 5 Autos beizubehalten (siehe unten die Verteilung der Autos).
+            </Toast.Body>
+          </Toast>
 
           <Toast>
             <Toast.Header closeButton={false}>
@@ -82,12 +99,13 @@ const Article = () => {
                 </Badge>{' '}
                 Ben
               </strong>
-              <small>17.04.2023</small>
+              <small>17. April 2023</small>
             </Toast.Header>
             <Toast.Body>
               Da wir noch nicht darüber gesprochen haben, wie wir unseren Urlaub gestalten möchten, kann ich nur eine grobe Schätzung abgeben. Es ist anzunehmen, dass jeder von uns etwa 200-300€ für die Essensverpflegung benötigen wird. Sobald wir Einzelheiten besprochen haben, können wir eine genauere Kostenschätzung machen.
 
-              Ich hoffe, das hilft Ihnen weiter.            </Toast.Body>
+              Ich hoffe, das hilft Ihnen weiter.
+            </Toast.Body>
           </Toast>
 
           <Toast>
@@ -99,13 +117,13 @@ const Article = () => {
                 </Badge>{' '}
                 Ben
               </strong>
-              <small>17.04.2023</small>
+              <small>17. April 2023</small>
             </Toast.Header>
             <Toast.Body>Die Reisehinweise sind selbstverständlich wichtige Vorsichtsmaßnahmen und können auf den ersten Blick überwältigend wirken. Meiner Meinung nach kann es jedoch ausreichen, eine Checkliste aus dem Internet herunterzuladen und diese zu beachten. Es ist jedoch empfehlenswert, dass Eltern sich zumindest einmal einen Überblick über die Hinweise verschaffen, um mögliche Risiken zu minimieren. Besonders bei Reisen mit Minderjährigen ist es unbedingt erforderlich, eine Vollmacht herunterzuladen, um eventuelle Schwierigkeiten bei der Einreise zu vermeiden.
             </Toast.Body>
           </Toast>
         </Row>
-          <Row>
+        <Row>
           <h2 className="text-center mb-5">Fahrt</h2>
 
           <Card style={{ width: '80rem' }}>
@@ -113,11 +131,10 @@ const Article = () => {
               <Card.Title><FcAutomotive /><FcAdvance />Abfahrt:</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">10.06.23 - 7:30Uhr</Card.Subtitle>
               <Card.Text>
-                Um ideal anzukommen für den Check-In, sollten wir ca. um 7:30 Uhr losfahren am 10.06.2023.
+                Um den Check-In pünktlich und stressfrei zu erreichen, empfehle ich, am 10.06.2023 in der Früh um etwa 7:30 Uhr abzufahren.
               </Card.Text>
               <Card.Text>
-                Die schnellste Route beträgt ca. 640km und dauer 7h 15min. Die Route verläuft durch Österreich, Slowenien und Kroatien. Es gibt auch alternative Routen, jedoch
-                dauert es länger und man spart nicht unbedingt mehr Geld.
+                Die schnellste Route, welche durch Österreich, Slowenien und Kroatien führt, beträgt ca. 640 km und dauert 7 Stunden und 15 Minuten. Es gibt zwar alternative Routen, diese dauern jedoch länger und es besteht keine Garantie, dass man dadurch Geld spart.
               </Card.Text>
             </Card.Body>
           </Card>
@@ -142,12 +159,12 @@ const Article = () => {
             </Card>
 
 
-            <Card border="warning" style={{ width: '18rem' }}>
+            <Card border="warning" >
               <Card.Header><h4>Hinweis</h4></Card.Header>
               <Card.Body>
                 <Card.Title>Kosten</Card.Title>
                 <Card.Text>
-                  <i>Die Kosten untescheiden sich natürlich, wie viel das Auto verbraucht, wie die Mautpreise berechnet werden an den bestimmten Tagen. Die Angaben hier soll nur eine Abschätzung sein.
+                  <i>Die Kosten variieren je nach dem Verbrauch des Autos, den Mautgebühren an den jeweiligen Tagen und der Anzahl der Mitfahrer im Auto. Die hier angegebenen Informationen dienen lediglich als grobe Schätzung.
                   </i>
                 </Card.Text>
                 <Card.Text>
@@ -157,6 +174,51 @@ const Article = () => {
                   Die Mautkosten wurden entnommen von ADAC
                 </Card.Text>
               </Card.Body>
+            </Card>
+
+            <Card>
+              <Table striped >
+                <thead>
+                  <tr>
+                    <th>Auto</th>
+                    <th>Fahrer:</th>
+                    <th>Insassen:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Jasmin</td>
+                    <td>Sara, Sofie, Marlena</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Bene</td>
+                    <td>Fene, Maxi, Phillip</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Tim</td>
+                    <td>Leo, Simon</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Niklas</td>
+                    <td>Paul G, Paul T.</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>David</td>
+                    <td>Ben, Tomi</td>
+                  </tr>
+                  <tr>
+                    <td colSpan={3}>Marek, Till und Thomas fahren nach oder mit den Eltern</td>
+
+                  </tr>
+
+                </tbody>
+
+              </Table>
             </Card>
           </CardGroup>
         </Row>
@@ -168,8 +230,7 @@ const Article = () => {
               <Card.Title><FcAdvance /><FcHome />Ankunft:</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">10.06.23 - 16:00Uhr</Card.Subtitle>
               <Card.Text>
-                Da um 16:00 Uhr Check-In ist, werden alle formele Sachen abgearbeitet, wir übergeben das Geld (Kaution, Kosten) und erhalten die Schlüssel. Die anfallenden Kosten
-                wurden bereits eingesammelt auf
+                Da der Check-In um 16:00 Uhr stattfindet, werden bei Ankunft alle Formalitäten erledigt, wie die Übergabe des Geldes (Kaution und Kosten) und die Herausgabe der Schlüssel. Die anfallenden Kosten wurden bereits im Voraus eingesammelt auf
                 <Card.Link href="https://www.paypal.com/pools/c/8RCHTCf7UR" target="_blank" rel="noopener noreferrer"><BsPaypal />PayPal.</Card.Link>
               </Card.Text>
               <a href="https://fewo-direkt.de/ferienwohnung-ferienhaus/p6879604" target="_blank" rel="noopener noreferrer">
@@ -184,15 +245,19 @@ const Article = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>800€</td>
+                    <td>+800€</td>
                     <td>Kaution</td>
                   </tr>
                   <tr>
-                    <td>4.800€ für 7 Nächte</td>
+                    <td>+4.800€ für 7 Nächte</td>
                     <td>Übernachtung</td>
                   </tr>
                   <tr>
-                    <td colSpan={2}>sind 240€(Übernachtung) + 40€(Kaution)</td>
+                    <td colSpan={2}>=Insgesamt 5.600€ für die Klasse</td>
+
+                  </tr>
+                  <tr>
+                    <td colSpan={2}>sind 240€(Übernachtung) + 40€(Kaution) für jede einzelne Person</td>
                   </tr>
                 </tbody>
 
@@ -385,6 +450,10 @@ const Article = () => {
           </p>
         </Row>
         <br />
+        <Row>
+          <h2 className="text-center mb-5">Packliste für Kroatien</h2>
+          <PackageList />
+        </Row>
 
       </Card.Body>
     </Card >

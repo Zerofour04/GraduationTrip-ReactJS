@@ -6,8 +6,8 @@ const Banner = () => {
   return (
     <div className="banner">
       <Container>
-        <h1 className="title">Feed von Zerofour04</h1>
-        <p className="subtitle">Entwickler</p>
+        <h1 className="title">Abi-Fahrt der FT12D</h1>
+        <p className="subtitle">Entwickler dieser Website: Ben Ho</p>
       </Container>
     </div>
   );
