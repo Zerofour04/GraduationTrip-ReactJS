@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Article.css";
-import { Card, Button, Row, Col } from "react-bootstrap";
+import { Card, Button, Row, Col, ToastContainer } from "react-bootstrap";
 import PostFooter from "../PostFooter/PostFooter";
 import PostDropDown from "../PostDropDown/PostDropDown";
 import ArticlePicture from './ssss.jpg'
@@ -17,7 +17,7 @@ import Badge from 'react-bootstrap/Badge';
 import Toast from 'react-bootstrap/Toast';
 import Weather from "../../api/Weather";
 import TravelAdvice from "./components/TravelAdvice";
-import AvatarBen from '../PostFooter/AvatarBen.png';
+import Iframe from 'react-iframe'
 import PackageList from "./components/PackageList";
 
 const Article = () => {
@@ -41,6 +41,7 @@ const Article = () => {
             <PostDropDown />
           </Col>
         </Row>
+
         <Row>
           <Col className="d-flex">
             <div className="px-2 pb-2">
@@ -86,10 +87,24 @@ const Article = () => {
               <small>11. Mai 2023</small>
             </Toast.Header>
             <Toast.Body>
-              Vor 2 Wochen hat sich ein Schüler, der Teil unserer Gruppe ist und als Fahrer vorgesehen war, den Zeh gebrochen. Dies könnte zukünftig zu Problemen bei der Anreise führen. Glücklicherweise haben wir bereits alternative Lösungen besprochen. Eine Möglichkeit wäre, dass ein Schüler einen Tag später mit einem anderen Schüler mitfährt, um die ursprüngliche Anzahl von 5 Autos beizubehalten (siehe unten die Verteilung der Autos).
-            </Toast.Body>
+              Aufgrund des Verlusts des Führerscheins eines Fahrers, der eigentlich für die Fahrt vorgesehen war, muss sich die Gruppe entweder Marek anschließen, der einen Tag später fährt, oder eine Alternativmöglichkeit suchen.</Toast.Body>
           </Toast>
-
+          <p />
+          <Toast>
+            <Toast.Header closeButton={false}>
+              <img className="rounded me-2" alt="" />
+              <strong className="me-auto">
+                <Badge bg="warning" text="dark">
+                  Hinweis
+                </Badge>{' '}
+                Ben
+              </strong>
+              <small>11. Mai 2023</small>
+            </Toast.Header>
+            <Toast.Body>
+              Vor zwei Wochen erlitt ein Schüler, der Teil unserer Gruppe ist und als Fahrer vorgesehen war, eine Zehenverletzung. Allerdings hat der Schüler am 1. Mai einen Untersuchungstermin, und es besteht eine große Wahrscheinlichkeit, dass er danach wieder fahrtüchtig ist.            </Toast.Body>
+          </Toast>
+          <p />
           <Toast>
             <Toast.Header closeButton={false}>
               <img className="rounded me-2" alt="" />
@@ -103,10 +118,9 @@ const Article = () => {
             </Toast.Header>
             <Toast.Body>
               Da wir noch nicht darüber gesprochen haben, wie wir unseren Urlaub gestalten möchten, kann ich nur eine grobe Schätzung abgeben. Es ist anzunehmen, dass jeder von uns etwa 200-300€ für die Essensverpflegung benötigen wird. Sobald wir Einzelheiten besprochen haben, können wir eine genauere Kostenschätzung machen.
-
-              Ich hoffe, das hilft Ihnen weiter.
             </Toast.Body>
           </Toast>
+          <p />
 
           <Toast>
             <Toast.Header closeButton={false}>
@@ -123,6 +137,7 @@ const Article = () => {
             </Toast.Body>
           </Toast>
         </Row>
+
         <Row>
           <h2 className="text-center mb-5">Fahrt</h2>
 
@@ -148,16 +163,16 @@ const Article = () => {
             <Card >
               <Card.Header><h4>Kosten für die Hinfahrt</h4></Card.Header>
               <ListGroup variant="flush">
-                <ListGroup.Item><h6><BsFillFuelPumpFill />Verbrauchskosten: 100€</h6></ListGroup.Item>
+                <ListGroup.Item><BsFillFuelPumpFill />+Verbrauchskosten: 100€</ListGroup.Item>
                 <ListGroup.Item><BsCashStack />+Österreich: Vignetengebühr (AT) 9,90€</ListGroup.Item>
                 <ListGroup.Item><BsCashStack />+Österreich: Mautgebühren (AT) 21,30€</ListGroup.Item>
                 <ListGroup.Item><BsCashStack />+Slowenien: Vignetengebühr (SI) 15,00€</ListGroup.Item>
                 <ListGroup.Item><BsCashStack />+Kroatien: Mautgebühren (HR) 6,10€</ListGroup.Item>
-                <ListGroup.Item><h6><BsCashStack />=Gebührenpflichtige Abschnitte 52,30€</h6></ListGroup.Item>
+                <ListGroup.Item><h6><BsCashStack />=Gebührenpflichtige Abschnitte ~52,30€</h6></ListGroup.Item>
+                <ListGroup.Item><h6>Insgesamt: ~150€</h6></ListGroup.Item>
                 <ListGroup.Item><h6>Kosten für 4 Leute je Auto : 38€</h6></ListGroup.Item>
               </ListGroup>
             </Card>
-
 
             <Card border="warning" >
               <Card.Header><h4>Hinweis</h4></Card.Header>
@@ -171,60 +186,118 @@ const Article = () => {
                   Bei den Angaben wurde hiermit berechnet: (7,5l/100km bei 1,86€/l)
                 </Card.Text>
                 <Card.Text>
-                  Die Mautkosten wurden entnommen von ADAC
+                  Die Mautkosten wurden entnommen von
                 </Card.Text>
+                <Card.Link href="https://maps.adac.de/route?places=48.17178_11.26233_6_0,44.87023_13.84553_7_0&vehicle-type=car&bounds=45.30352,8.67277-49.38967,16.87824" target="_blank" rel="noopener noreferrer">
+                  ADAC
+                </Card.Link> und
+                <Card.Link href="https://apps.impargo.de/planner?stops[0]=82256%20Fürstenfeldbruck%2CHauptstraße%2027%2CFürstenfeldbruck%2CDeutschland,48.179140,11.254630&stops[1]=52100%20Medulin%2CBanjole%2CBanjole%2CKroatien,44.826170,13.871720" target="_blank" rel="noopener noreferrer">
+                  Impargo
+                </Card.Link>
+
               </Card.Body>
             </Card>
+          </CardGroup>
 
+          <Row>
+            <br />
+          </Row>
+          <CardGroup>
             <Card>
-              <Table striped >
-                <thead>
-                  <tr>
-                    <th>Auto</th>
-                    <th>Fahrer:</th>
-                    <th>Insassen:</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Jasmin</td>
-                    <td>Sara, Sofie, Marlena</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Bene</td>
-                    <td>Fene, Maxi, Phillip</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Tim</td>
-                    <td>Leo, Simon</td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td>Niklas</td>
-                    <td>Paul G, Paul T.</td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td>David</td>
-                    <td>Ben, Tomi</td>
-                  </tr>
-                  <tr>
-                    <td colSpan={3}>Marek, Till und Thomas fahren nach oder mit den Eltern</td>
-
-                  </tr>
-
-                </tbody>
-
-              </Table>
+              <Card.Body>
+                <Card.Title>Sitzaufteilung Hinfahrt:</Card.Title>
+                <Table striped >
+                  <thead>
+                    <tr>
+                      <th>Auto</th>
+                      <th>Fahrer:</th>
+                      <th>Insassen:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Jasmin</td>
+                      <td>Sara, Sofie, Marlena</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Bene</td>
+                      <td>Fene, Maxi, Phillip</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Tim</td>
+                      <td>Leo, Simon</td>
+                    </tr>
+                    <tr>
+                      <td><del>4</del></td>
+                      <td><del>Niklas</del></td>
+                      <td><del>Paul G, Paul T.</del></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>David</td>
+                      <td>Ben, Tomi</td>
+                    </tr>
+                    <tr>
+                      <td colSpan={3}>Marek, Till und Thomas fahren nach oder mit den Eltern</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </Card.Body>
+            </Card>
+            <p />
+            <Card>
+              <Card.Body>
+                <Card.Title>Sitzaufteilung Rückfahrt:</Card.Title>
+                <Table striped >
+                  <thead>
+                    <tr>
+                      <th>Auto</th>
+                      <th>Fahrer:</th>
+                      <th>Insassen:</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Jasmin</td>
+                      <td>Sara, Sofie, Marlena</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Bene</td>
+                      <td>Fene, Maxi, Phillip</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Tim</td>
+                      <td>Leo, Simon</td>
+                    </tr>
+                    <tr>
+                      <td><del>4</del></td>
+                      <td><del>Niklas</del></td>
+                      <td><del>Paul G, Paul T.</del></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>David</td>
+                      <td>Ben, Marek, Tomi</td>
+                    </tr>
+                    <tr>
+                      <td colSpan={3}>Noch offen: Till, Thomas, Paul T., Paul G.</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </Card.Body>
             </Card>
           </CardGroup>
         </Row>
         <br />
         <Row>
           <h2 className="text-center mb-5">Unterkunft</h2>
+
           <Card style={{ width: '80rem' }}>
             <Card.Body>
               <Card.Title><FcAdvance /><FcHome />Ankunft:</Card.Title>
@@ -236,6 +309,10 @@ const Article = () => {
               <a href="https://fewo-direkt.de/ferienwohnung-ferienhaus/p6879604" target="_blank" rel="noopener noreferrer">
                 <button class="btn btn-outline-secondary btn-block house-btn"><FaHouseUser />Link: Unterkunft</button>
               </a>
+              <Iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d407.04110047871563!2d13.878228299580964!3d44.827163844351!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47632b5fe3acf759%3A0x7bc2bfea0d3d6acb!2s52100%2C%20Banjole%2C%20Kroatien!5e1!3m2!1sde!2sde!4v1685054021955!5m2!1sde!2sde"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              />
+              <p />
               <Table striped >
                 <thead>
                   <tr>
@@ -292,7 +369,7 @@ const Article = () => {
           <Table striped >
             <thead>
               <tr>
-                <th colSpan={0}>Leben, kochen, wohnen</th>
+                <th colSpan={2}>Leben, kochen, wohnen</th>
               </tr>
             </thead>
             <tbody>
@@ -308,6 +385,7 @@ const Article = () => {
                 <td>Terasse</td>
                 <td>Veranda</td>
               </tr>
+
             </tbody>
           </Table>
           <Table striped >
@@ -445,7 +523,12 @@ const Article = () => {
           </Alert>
           <p>
             <a href="https://res.cloudinary.com/adacde/image/upload/v1571649899/ADAC-eV/KOR/Text/PDF/reisevollmacht-kroatien_sdd9jk.pdf" target="_blank" rel="noopener noreferrer">
-              <button class="btn btn-outline-secondary btn-block download-btn"><FaDownload />Vollmacht herunterladen</button>
+              <button class="btn btn-outline-secondary btn-block download-btn"><FaDownload />Vollmacht (Deutsch-Kroatisch) herunterladen</button>
+            </a>
+          </p>
+          <p>
+            <a href="https://res.cloudinary.com/adacde/image/upload/v1571649306/ADAC-eV/KOR/Text/PDF/reisevollmacht-englisch_kutovt.pdf" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-outline-secondary btn-block download-btn"><FaDownload />Vollmacht (Deutsch-Englisch) herunterladen</button>
             </a>
           </p>
         </Row>
@@ -454,7 +537,23 @@ const Article = () => {
           <h2 className="text-center mb-5">Packliste für Kroatien</h2>
           <PackageList />
         </Row>
-
+        <br />
+        <Row>
+          <p>
+            <a href="https://www.packlisten.org/api/pdf/page/kroatien/couple//packliste-kroatien//True/Packliste%20Kroatien" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-outline-secondary btn-block maps-btn"><FaDownload />Gesamte Packliste</button>
+            </a>
+          </p>
+        </Row>
+        <br />
+        <Row>
+          <h2 className="text-center mb-5">Reiseführer</h2>
+          <p>
+            <a href="https://www.kroati.de/kroatien-istrien/banjole.html" target="_blank" rel="noopener noreferrer">
+              <button class="btn btn-outline-secondary btn-block house-btn"><FaDownload />Reiseführer für Banjole</button>
+            </a>
+          </p>
+        </Row>
       </Card.Body>
     </Card >
   )

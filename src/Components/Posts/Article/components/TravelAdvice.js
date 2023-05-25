@@ -56,8 +56,12 @@ export default function TravelAdvice() {
           alt="Paella dish"
         />
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            Hier stehen alle wichtigen Informationen/Bestimmungen, die für Kroatien gelten.
+          <Typography textAlign='center'>
+            Hier stehen alle wichtigen Bestimmungen, die für Kroatien gelten.
+          </Typography>
+          <p/>
+          <Typography textAlign='center' variant="body2" color="text.secondary">
+            Öffnen mit dem Pfeil
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
