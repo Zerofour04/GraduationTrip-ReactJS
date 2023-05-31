@@ -84,25 +84,25 @@ const Article = () => {
                 </Badge>{' '}
                 Ben
               </strong>
-              <small>11. Mai 2023</small>
+              <small>31. Mai 2023</small>
             </Toast.Header>
             <Toast.Body>
-              Aufgrund des Verlusts des Führerscheins eines Fahrers, der eigentlich für die Fahrt vorgesehen war, muss sich die Gruppe entweder Marek anschließen, der einen Tag später fährt, oder eine Alternativmöglichkeit suchen.</Toast.Body>
+            Da der Fahrer, der ursprünglich für die Fahrt vorgesehen war, seinen Führerschein verloren hat, muss die Gruppe eine alternative Lösung finden, um an der Fahrt teilzunehmen.</Toast.Body>
           </Toast>
           <p />
           <Toast>
             <Toast.Header closeButton={false}>
               <img className="rounded me-2" alt="" />
               <strong className="me-auto">
-                <Badge bg="warning" text="dark">
-                  Hinweis
+                <Badge bg="danger" text="dark">
+                  Dringender Hinweis
                 </Badge>{' '}
                 Ben
               </strong>
-              <small>11. Mai 2023</small>
+              <small>31. Mai 2023</small>
             </Toast.Header>
             <Toast.Body>
-              Vor zwei Wochen erlitt ein Schüler, der Teil unserer Gruppe ist und als Fahrer vorgesehen war, eine Zehenverletzung. Allerdings hat der Schüler am 1. Mai einen Untersuchungstermin, und es besteht eine große Wahrscheinlichkeit, dass er danach wieder fahrtüchtig ist.            </Toast.Body>
+            Vor vier Wochen hat sich ein Schüler, der Teil unserer Gruppe ist und als Fahrer eingeplant war, eine Zehenverletzung zugezogen. Aufgrund dieser Verletzung ist es ihm nicht möglich, als Fahrer zu fungieren.</Toast.Body>
           </Toast>
           <p />
           <Toast>
@@ -154,7 +154,10 @@ const Article = () => {
             </Card.Body>
           </Card>
           <a href="https://www.google.de/maps/dir/Staatl.+Fachoberschule+u.+Berufsoberschule+Fürstenfeldbruck,+Münchner+Str.+67,+82256+Fürstenfeldbruck,+Deutschland/52100,+Banjole,+Kroatien" target="_blank" rel="noopener noreferrer">
-            <button class="btn btn-outline-secondary btn-block maps-btn"><SiGooglemaps />Link: Route (Google Maps)</button>
+            <button class="btn btn-outline-secondary btn-block maps-btn"><SiGooglemaps />Link: Route (Auto)</button>
+          </a>
+          <a href="https://goo.gl/maps/Ywq3FTUsP7WwKP699" target="_blank" rel="noopener noreferrer">
+            <button class="btn btn-outline-secondary btn-block maps-btn"><SiGooglemaps />Link: Route (FlixBus)</button>
           </a>
         </Row>
         <br></br>
@@ -227,18 +230,18 @@ const Article = () => {
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Tim</td>
-                      <td>Leo, Simon</td>
+                      <td>David</td>
+                      <td>Ben, Tomi</td>
                     </tr>
                     <tr>
                       <td><del>4</del></td>
-                      <td><del>Niklas</del></td>
-                      <td><del>Paul G, Paul T.</del></td>
+                      <td><del>Tim</del></td>
+                      <td><del>Leo, Simon</del></td>
                     </tr>
                     <tr>
-                      <td>5</td>
-                      <td>David</td>
-                      <td>Ben, Tomi</td>
+                      <td><del>5</del></td>
+                      <td><del>Niklas</del></td>
+                      <td><del>Paul G, Paul T.</del></td>
                     </tr>
                     <tr>
                       <td colSpan={3}>Marek, Till und Thomas fahren nach oder mit den Eltern</td>
@@ -272,21 +275,19 @@ const Article = () => {
                     </tr>
                     <tr>
                       <td>3</td>
-                      <td>Tim</td>
-                      <td>Leo, Simon</td>
-                    </tr>
-                    <tr>
-                      <td><del>4</del></td>
-                      <td><del>Niklas</del></td>
-                      <td><del>Paul G, Paul T.</del></td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
                       <td>David</td>
                       <td>Ben, Marek, Tomi</td>
                     </tr>
                     <tr>
-                      <td colSpan={3}>Noch offen: Till, Thomas, Paul T., Paul G.</td>
+                      <td><del>4</del></td>
+                      <td><del>Tim</del></td>
+                      <td><del>Leo, Simon</del></td>
+                    </tr>
+
+                    <tr>
+                      <td><del>5</del></td>
+                      <td><del>Niklas</del></td>
+                      <td><del>Paul G, Paul T.</del></td>
                     </tr>
                   </tbody>
                 </Table>
