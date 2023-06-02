@@ -3,8 +3,8 @@ import ReactWeather, { useOpenWeather } from 'react-open-weather';
 const Weather = () => {
     const { data, isLoading, errorMessage } = useOpenWeather({
       key: '47e51299e3d061234371dc3b524ea1c9',
-      lat: '44.823391',
-      lon: '13.866065',
+      lat: '44.86833',
+      lon: '13.84806',
       lang: 'de',
       unit: 'metric', // values are (metric, standard, imperial)
     });
